@@ -697,6 +697,7 @@
   bottom: 20px;
   right: 30px;
   display: none;
+  cursor: pointer;
   box-shadow: 1px 0px 20px 0px #000;
 }
 
