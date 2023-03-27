@@ -1,6 +1,8 @@
 let hamburger_menu = document.querySelector(".hamburger_menu");
 let hamburger_menu_items = document.querySelector(".hamburger_menu_items");
 let close_menu = document.querySelector(".close_menu");
+let scrollToTopBtn = document.getElementsByClassName("scrollToTopBtn")[0]
+// console.log(scrollToTopBtn);
 // console.log(close_menu);
 
 hamburger_menu.addEventListener("click", () => {
@@ -48,5 +50,18 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
     // Select the first item on page load
     items[0].classList.add("carousel__item--selected");
     buttons[0].classList.add("carousel__button--selected");
-  });
-  
+})
+
+// scroll Top
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+})
+var rootElement = document.documentElement;
+document.addEventListener("scroll", () => {
+  let scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+  if ((rootElement.scrollTop / scrollTotal) > 0.15) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+})

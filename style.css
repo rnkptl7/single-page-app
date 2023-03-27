@@ -9,9 +9,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .hero_section {
+  overflow-x: hidden;
   height: 100vh;
   position: relative;
 }
@@ -686,6 +688,22 @@
   width: 20px;
 }
 
+.scrollToTopBtn {
+  background-color: black;
+  border-radius: 50%;
+  border: none;
+  padding: 15px 18px;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  display: none;
+  box-shadow: 1px 0px 20px 0px #000;
+}
+
+.scrollToTopBtn img {
+  width: 20px;
+}
+
 /* ===================== */
 /* Media Query */
 @media (min-width: 844px) and (max-width: 1024px) {
@@ -786,14 +804,16 @@
     padding-right: 30px;
   }
 }
-
-@media (min-width: 500px) and (max-width: 844px) {
+@media screen and (max-width: 844px) {
   .hero_section .navbar .hamburger_menu {
     display: block;
   }
   .hero_section .navbar .nav_items {
     display: none;
   }
+}
+
+@media (min-width: 500px) and (max-width: 844px) {
   .hero_section .navbar {
     padding: 20px 50px;
   }
@@ -920,6 +940,157 @@
   .footer .footer_social {
     flex-direction: column;
     text-align: center;
+  }
+  .footer .footer_social .social_media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 290px) and (max-width: 499px) {
+  .hero_section .navbar {
+    padding: 20px 15px;
+  }
+  .hero_section .hero_section_inner .hero_section_content h1 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .hero_section .hero_section_inner .hero_section_content p {
+    font-size: 17px;
+  }
+  .vision_section {
+    padding: 100px 0;
+  }
+  .vision_section .vision_section_inner {
+    flex-direction: column;
+    padding-left: 50px;
+  }
+  .vision_section .vision_section_inner .vision_section_content {
+    width: 90%;
+  }
+  .vision_section .vision_section_inner .vision_section_content .content {
+    width: 100%;
+  }
+  .vision_section .vision_section_inner .vision_section_img {
+    width: 90%;
+  }
+  .service_section {
+    padding: 80px 0;
+  }
+  .service_section .service_section_inner .service_section_header {
+    width: 80%;
+    margin-left: 50px;
+  }
+  .service_section
+    .service_section_inner
+    .service_section_header
+    .header_service
+    p {
+    font-size: 22px;
+  }
+  .service_section .service_section_inner .service_section_content {
+    padding: 0 20px;
+  }
+  .service_section
+    .service_section_inner
+    .service_content_inner
+    .service_content {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+  .service_section
+    .service_section_inner
+    .service_content_inner
+    .service_content_img {
+    width: 100%;
+  }
+  .service_section
+    .service_section_inner
+    .service_content_inner
+    .service_content_img
+    .imageContainer:nth-child(2) {
+    display: none;
+  }
+  .image .imageContainer::after {
+    width: 90%;
+  }
+  .service_section .service_section_inner .service_content_inner {
+    flex-direction: column;
+  }
+  .service_section
+    .service_section_inner
+    .service_content_inner
+    .service_content_img
+    .carSensor
+    img {
+    width: 100%;
+  }
+  .technology_section {
+    height: 130vh;
+  }
+  .technology_section .technology_content {
+    left: 2%;
+    top: 3%;
+    padding: 40px;
+    width: 96%;
+  }
+  .technology_section .technology_content .technology_line {
+    left: 23px;
+  }
+  .service_section
+    .service_section_inner
+    .service_content_inner
+    .service_content_img
+    img:nth-child(1) {
+    width: 100%;
+  }
+  .service_section
+    .service_section_inner
+    .service_content_inner
+    .service_content
+    p {
+    width: 100%;
+  }
+  .career_section {
+    padding: 120px 26px;
+    flex-direction: column;
+  }
+  .career_section .section_career_content {
+    width: 100%;
+  }
+  .section_career_carousel {
+    width: 100%;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .career_section .section_career_content .career_line {
+    left: -20px;
+  }
+  .carousel {
+    width: 100%;
+  }
+  .carousel__item {
+    height: 650px;
+    padding: 1.8em;
+  }
+  .footer {
+    padding: 150px 24px 50px;
+  }
+  .footer .footer_content {
+    flex-direction: column;
+  }
+  .footer .footer_form input {
+    width: 160px;
+  }
+  .footer .footer_form p {
+    margin: 15px 0;
+  }
+  .footer .footer_social {
+    flex-direction: column;
+    text-align: center;
+    padding: 18px;
   }
   .footer .footer_social .social_media {
     display: flex;
